@@ -13,7 +13,7 @@ return [
 	|
 	*/
 
-	'debug' => env('APP_DEBUG', false),
+	'debug' => env('APP_DEBUG', true),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -39,7 +39,7 @@ return [
 	|
 	*/
 
-	'timezone' => 'UTC',
+	'timezone' => 'Asia/Yerevan',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -136,6 +136,7 @@ return [
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 
+		'AlfredoRamos\ParsedownExtra\ParsedownExtraServiceProvider',
 		/*
 		 * Application Service Providers...
 		 */
@@ -192,6 +193,7 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
+		'Markdown'  => 'AlfredoRamos\ParsedownExtra\Facades\ParsedownExtra',
 
 	],
 
