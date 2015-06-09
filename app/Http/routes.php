@@ -11,13 +11,21 @@
 |
 */
 
-//Route::get('/', 'WelcomeController@index');
 
-// Route::get('/', 'HomeController@index');
-Route::get('/', 'MyGlobalController@index');
-Route::get('about', 'MyGlobalController@about');
+Route::get('/', 'PostsController@profile');
+Route::get('/login', 'UsersController@loginPage');
+Route::get('/registration', 'UsersController@registrationPage');
 
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+Route::post('/auth', 'UsersController@authUser');
+
+Route::post('/register-user', 'UsersController@storeUser');
+
+
+Route::get('/posts', 'PostsController@index');
+Route::get('/posts/create', 'PostsController@create');
+Route::post('/posts/update/{id}', 'PostsController@update');
+Route::post('/posts/delete/{id}', 'PostsController@delete');
+Route::get('/posts/show/{id}', 'PostsController@show');
+Route::get('/posts/edit/{id}', 'PostsController@edit');
+
+Route::post('/posts/store', 'PostsController@store');
