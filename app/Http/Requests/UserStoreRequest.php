@@ -22,9 +22,17 @@ class UserStoreRequest extends Request {
 	public function rules()
 	{
 		return [
+<<<<<<< HEAD
 		'username' => 'required|alpha_num',
 		'email' =>	'required|email',
 		'password' => 'required|min:8',
+=======
+			'username' => 'required|alpha_num|min:3|max:32',
+			'email'    => 'required|email|unique:users',
+			'password' => 'required|min:6|confirmed',
+			'password_confirmation' => 'required',
+
+>>>>>>> 78a86689a0bc0a7ccae24e3f3917c86be3e1b4b7
 		];
 	}
 

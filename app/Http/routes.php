@@ -12,10 +12,20 @@
 */
 
 
+<<<<<<< HEAD
 Route::get('/', 'PostsController@profile');
 Route::get('/login', 'UsersController@loginPage');
 Route::get('/registration', 'UsersController@registrationPage');
 
+=======
+
+Route::get('/', 'PostsController@profile');
+Route::get('/login', 'UsersController@loginPage');
+Route::get('/logout', 'UsersController@logout');
+
+Route::get('/registration', 'UsersController@registrationPage');
+
+>>>>>>> 78a86689a0bc0a7ccae24e3f3917c86be3e1b4b7
 Route::post('/auth', 'UsersController@authUser');
 
 Route::post('/register-user', 'UsersController@storeUser');
