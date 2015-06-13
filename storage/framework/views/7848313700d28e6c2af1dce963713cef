@@ -1,0 +1,44 @@
+
+
+<?php $__env->startSection('title'); ?> Login <?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+	
+
+
+	<div style="margin: 5% 30%;">
+		
+		<?php echo $__env->make('templates.partials.alerts', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	
+		<form action="<?php echo e(action('UsersController@storeUser')); ?>" method="POST" role="form" accept-charset="UTF-8">
+			<legend>Registration</legend>
+			
+			<input type="hidden" value="<?php echo csrf_token(); ?>" name="_token">
+
+			<div class="form-group">
+				<label for="">Username</label>
+				<input name="username" type="text" class="form-control" id="" placeholder="Username">
+			</div>
+
+			<div class="form-group">
+				<label for="">Email</label>
+				<input name="email" type="text" class="form-control" id="" placeholder="Email">
+			</div>
+
+			<div class="form-group">
+				<label for="">Password</label>
+				<input name="password" type="password" class="form-control" id="" placeholder="Password">
+			</div>
+
+			<div class="form-group">
+				<label for="">Password Confirmation</label>
+				<input name="password_confirmation" type="password" class="form-control" id="" placeholder="Enter Password Again">
+			</div>			
+		
+			<button type="submit" class="btn btn-danger">Register</button>
+
+		</form>
+
+	</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('templates.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

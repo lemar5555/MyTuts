@@ -1,0 +1,521 @@
+.prifile-page { 
+  background: url('/images/HomePagePicture.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.red-box {
+	background-color: red;
+	border: 2px solid black;
+}
+
+.my-menu {
+	margin-bottom: 20px;
+}
+
+.my-menu ul {
+	float: right;
+}
+
+.my-menu ul>li>a {
+/*Variant 1*/
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-left: 0px;
+	padding-right: 0px;
+/*Variant 2*/
+	/*padding-left: 0px;*/
+	/*padding-right: 0px;*/
+
+}
+
+#redHover a {
+	/*border-bottom: 2px solid rgb(51, 51, 51);*/
+	font-size: 20px;
+}
+
+#redHover a:hover {
+	/*border-bottom: 2px solid rgba(255, 68, 35, 0.7);*/
+	color: #FF4423;
+	text-decoration: none;
+}
+
+#loginButton {
+	color: white;
+	background-color: #333;
+	border-color: #333;
+}
+
+#loginButton:hover {
+	background-color: #0F0F0F;
+	border: 1px solid black;
+}
+
+#logo:hover {
+	text-shadow: 0px 0px 5px rgba(255, 111, 35, 1);
+	
+}
+
+#myPagination li>a {
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+}
+
+#myPagination ul {
+	margin: 5px;
+	bottom: 0px;
+}
+
+#myPagination ul>li>a {
+	color: #FF4423;
+	background-color: #0F0F0F
+}
+
+
+
+#myPagination ul>li.active>span {
+	border-top: 2px solid #FF4423;
+	border-bottom: 2px solid #FF4423;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	color: #FF4423;
+	background-color: #0F0F0F
+}
+
+#myPagination ul>li.disabled>span {
+	
+	border-left-color: white;
+	border-right-color: white;
+	color: #FF4423;
+	background-color: #525252;
+}
+
+
+
+/* Underline Reveal */
+.border-bottom-reveal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+.border-bottom-reveal:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /*background: #2098d1;*/
+  background: #333;
+  height: 2px;
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+.border-bottom-reveal:hover:before, .border-bottom-reveal:focus:before, .border-bottom-reveal:active:before {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+/*ICON WOBBLE HORIZONTAL*/
+.wobble-icon {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  padding-right: 2.2em;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.wobble-icon:before {
+  content: "\f061";
+  /*position: absolute;*/
+  right: 1em;
+  padding: 0 3px;
+  font-family: FontAwesome;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.wobble-icon:hover:before, .wobble-icon:focus:before, .wobble-icon:active:before {
+  -webkit-animation-name: hvr-icon-wobble-horizontal;
+  animation-name: hvr-icon-wobble-horizontal;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+.active {
+  color: #FF4423 !important;
+  padding-bottom: 11px !important;
+  border-bottom: 4px solid #FF4423;
+}
+
+.active:hover {
+}
+
+/* Icon Sink Away */
+.icon-sink-away {
+  /*color: #FF4423;*/
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  padding-right: 2.2em;
+}
+.icon-sink-away:before, .icon-sink-away:after {
+  color: #FF4423;
+  content: "\f056";
+  position: absolute;
+  right: 1em;
+  padding: 0 1px;
+  font-family: FontAwesome;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.icon-sink-away:after {
+  opacity: 0;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.icon-sink-away:hover:after, .icon-sink-away:focus:after, .icon-sink-away:active:after {
+  -webkit-animation-name: hvr-icon-sink-away;
+  animation-name: hvr-icon-sink-away;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+/*edit-shake-icon BUZZ*/
+
+.edit-shake-icon {
+  color: #FF4423;
+/*  display: inline-block;*/
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  padding-right: 2.2em;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.edit-shake-icon:before {
+  color: #FF4423;
+  content: "\f044";
+  position: absolute;
+  right: 1em;
+  padding: 0 1px;
+  font-family: FontAwesome;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.edit-shake-icon:hover:before, .edit-shake-icon:focus:before {
+ /* color: #FF4423;
+  -webkit-animation-name: hvr-icon-buzz;
+  animation-name: hvr-icon-buzz;
+  -webkit-animation-duration: 0.15s;
+  animation-duration: 0.15s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;*/
+}
+
+.edit-shake-icon:active:before {
+  color: #FF4423;
+  -webkit-animation-name: hvr-icon-buzz;
+  animation-name: hvr-icon-buzz;
+  -webkit-animation-duration: 0.0s;
+  animation-duration: 0.0s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+
+
+
+/*REMOVE SHAKE ICON*/
+.remove-shake-icon {
+  color: #FF4423;
+/*  display: inline-block;*/
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  padding-right: 2.2em;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.remove-shake-icon:before {
+  color: #FF4423;
+  content: "\f00d";
+  position: absolute;
+  right: 1em;
+  padding: 0 1px;
+  font-family: FontAwesome;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.remove-shake-icon:hover:before, .remove-shake-icon:focus:before {
+ /* color: #FF4423;
+  -webkit-animation-name: hvr-icon-buzz;
+  animation-name: hvr-icon-buzz;
+  -webkit-animation-duration: 0.15s;
+  animation-duration: 0.15s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;*/
+}
+
+.remove-shake-icon:active:before {
+  color: #FF4423;
+  -webkit-animation-name: hvr-icon-buzz;
+  animation-name: hvr-icon-buzz;
+  -webkit-animation-duration: 0.0s;
+  animation-duration: 0.0s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+
+
+/**************************/
+.buttons-panel {
+  width: 10em;
+  text-align: center;
+  float: right;
+}
+
+.awesome-buttons {
+  border: none !important;
+  padding: 0px !important;
+  margin: 0px 10px;
+}
+.btn:focus,.btn:active {
+   
+}
+.awesome-buttons:hover, .awesome-buttons:active, .awesome-buttons:focus {
+  background-color: white !important;
+  border-color: white !important;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -o-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.awesome-buttons i {
+  font-style: normal;
+  font-size: 20px
+}
+
+/*ICON SAVE*/
+.cancel-shake-icon {
+  color: #FF4423;
+  /*display: inline-block;*/
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  padding-right: 2.2em;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.cancel-shake-icon:before {
+  color: #FF4423;
+  content: "\f177";
+  position: absolute;
+  right: 1em;
+  padding: 0 1px;
+  font-family: FontAwesome;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.cancel-shake-icon:hover:before, .cancel-shake-icon:focus:before, .cancel-shake-icon:active:before {
+  color: #FF4423;
+  -webkit-animation-name: hvr-icon-buzz;
+  animation-name: hvr-icon-buzz;
+  -webkit-animation-duration: 0.15s;
+  animation-duration: 0.15s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+
+/*Icon SAVE*/
+
+.save-shake-icon {
+  color: #FF4423;
+  /*display: inline-block;*/
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  padding-right: 2.2em;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.save-shake-icon:before {
+  color: #FF4423;
+  content: "\F0C7";
+  position: absolute;
+  right: 1em;
+  padding: 0 1px;
+  font-family: FontAwesome;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.save-shake-icon:hover:before, .save-shake-icon:focus:before, .save-shake-icon:active:before {
+  color: #FF4423;
+  -webkit-animation-name: hvr-icon-buzz;
+  animation-name: hvr-icon-buzz;
+  -webkit-animation-duration: 0.15s;
+  animation-duration: 0.15s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.v-resize-only {
+  resize: vertical;
+}
+
+  content: "\F01B";
+
+.upload-icon {
+}
+
+/*UPLOAD IMAGE BUTTON*/
+.upload-icon {
+  /*display: inline-block;*/
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  padding-right: 2.2em;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.upload-icon:before {
+  content: "\F01B";
+  position: absolute;
+  right: 1em;
+  padding: 0 1px;
+  font-family: FontAwesome;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.upload-icon:hover:before, .upload-icon:focus:before, .upload-icon:active:before {
+  -webkit-animation-name: hvr-icon-hang-sink, hvr-icon-hang;
+  animation-name: hvr-icon-hang-sink, hvr-icon-hang;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+}
+
+.btn-file {
+          position: relative;
+          overflow: hidden;
+
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+	.for-response {
+		border-color: #D01414;
+	}
+
+  #logo {
+    position: fixed;
+    top: 30px;
+  }
+
+	.for-response ul {
+		float: none;
+		text-align: center;
+	}
+
+	.for-response ul>li>a {
+		margin: auto 30%;
+	}
+}

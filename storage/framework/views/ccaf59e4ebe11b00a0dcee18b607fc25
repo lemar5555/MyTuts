@@ -1,0 +1,38 @@
+
+
+<?php $__env->startSection('title'); ?> All Posts <?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+	<?php echo $__env->make('templates.partials.alerts', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+	<div class="container" >
+	<h2 style="padding-bottom: 20px; border-bottom: 2px solid rgba(51, 51, 51, 0.5);">All Posts</h2>
+		<?php foreach($posts as $post): ?>
+			<form action="<?php echo action('PostsController@delete',['id' => $post->id]); ?>" method="POST">
+				<input type="hidden" name="PUT">
+				<br>
+				<article>
+				<?php if(Auth::id() == $post->user_id): ?>
+					<div class="buttons-panel">
+						<button type="submit" id="" class="btn btn-default awesome-buttons">
+						   <i id="addMe" class="remove-shake-icon"></i>
+						</button>
+					</div>
+				<?php endif; ?>
+					<!-- <span style="float: right;"><a class="remove-shake-icon" style="font-size: 20px;" href="<?php echo action('PostsController@delete',['id' => $post->id]); ?>" title=""></a></span> -->
+					<h2 style="margin: 20px 0px;"><?php echo $post->title; ?></h2>
+					<h5 style="color: #737373;"><span style="color: #FF4423;"><b>Published at:</b></span> <?php echo $post->created_at->diffForHumans(); ?></h5>
+					<p style="margin: 20px 0px;"><?php echo str_limit($post->body, 120); ?></p>
+					<p><a href="<?php echo action('PostsController@show',['id' => $post->id]); ?>" style="color: #333; text-decoration: none;">Read More <span class="wobble-icon" style="color: #FF4423;"> </span></a></p>
+				</article>
+			</form>
+		<?php endforeach; ?>
+	</div>
+
+	<div class="container">
+		<div id="myPagination">
+			<?php echo $posts->render(); ?>			
+		</div>
+	</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('templates.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
